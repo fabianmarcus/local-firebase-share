@@ -1,0 +1,51 @@
+{
+  "name": "@fabianmarcus/local-firebase-share",
+  "version": "0.1.0",
+  "description": "Framework-independent contracts for sharing browser data through Firebase.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabianmarcus/local-firebase-share.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/fabianmarcus/local-firebase-share#readme",
+  "bugs": {
+    "url": "https://github.com/fabianmarcus/local-firebase-share/issues"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "node ../../scripts/block-premature-publish.mjs"
+  },
+  "peerDependencies": {
+    "firebase": "~12.9.0"
+  },
+  "devDependencies": {
+    "firebase": "12.9.0"
+  }
+}
