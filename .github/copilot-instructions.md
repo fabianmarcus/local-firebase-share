@@ -1,0 +1,1 @@
+./copilot-shared/instructions/copilot-instructions.md

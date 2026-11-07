@@ -1,0 +1,7 @@
+node_modules/
+**/dist/
+.github/
+.vscode/
+package-lock.json
+LICENSE
+**/LICENSE

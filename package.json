@@ -1,0 +1,34 @@
+{
+  "name": "local-firebase-share-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "workspaces": [
+    "packages/core",
+    "packages/react"
+  ],
+  "engines": {
+    "node": "^22.18.0 || ^24.11.0 || >=26.0.0"
+  },
+  "scripts": {
+    "build": "npm run build --workspace @fabianmarcus/local-firebase-share && npm run build --workspace @fabianmarcus/react-local-firebase-share",
+    "typecheck": "npm run build && npm run typecheck --workspaces && tsc --project tests/tsconfig.json",
+    "lint": "eslint packages tests scripts *.ts *.mjs && prettier --check package.json packages tests scripts *.json *.ts *.mjs README.md LICENSE plans/*.md",
+    "format": "prettier --write package.json packages tests scripts *.json *.ts *.mjs README.md LICENSE plans/*.md",
+    "test": "npm run build && vitest run",
+    "test:watch": "vitest",
+    "check": "npm run lint && npm run typecheck && npm run test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.0",
+    "@types/node": "^22.19.0",
+    "eslint": "^10.14.0",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "prettier": "^3.6.2",
+    "tsdown": "^0.23.7",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.0",
+    "vitest": "^5.1.0"
+  }
+}

@@ -1,0 +1,6 @@
+[submodule ".github/copilot-shared"]
+	path = .github/copilot-shared
+	url = https://github.com/fabianmarcus/copilot
+[submodule ".vscode/vscode-shared"]
+	path = .vscode/vscode-shared
+	url = https://github.com/fabianmarcus/vscode
